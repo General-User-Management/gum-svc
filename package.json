@@ -1,0 +1,50 @@
+{
+  "name": "gum-svc",
+  "version": "1.0.0",
+  "description": "policy base access control",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "ava -s test/*.test.js",
+    "cover": "nyc ava -s test/*.test.js report --reporter=html",
+    "start": "node app.js",
+    "standardfix": "standard --fix",
+    "standard": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/General-User-Management/gum-svc.git"
+  },
+  "keywords": [
+    "policy",
+    "casbin"
+  ],
+  "author": "492753097@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/General-User-Management/gum-svc/issues"
+  },
+  "homepage": "https://github.com/General-User-Management/gum-svc#readme",
+  "dependencies": {
+    "casbin": "^5.11.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "qs": "^6.10.1",
+    "redis-watcher": "^1.1.0",
+    "typeorm-adapter": "^1.4.1"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0"
+  },
+  "standard": {
+    "ignore": [
+      "/**/*.test.js"
+    ],
+    "global": [
+      "enforcer"
+    ]
+  }
+}

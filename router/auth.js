@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const AuthServer = require('../server/auth-server')
 
-// define the home page route
+// operation policy
 router.post('/operation', async function (req, res, next) {
   try {
     const requestParams = Object.assign({}, req.query, req.params, req.body)
@@ -13,7 +13,7 @@ router.post('/operation', async function (req, res, next) {
   }
 })
 
-// define the about route
+// check policy
 router.post('/check', async function (req, res, next) {
   try {
     const requestParams = Object.assign({}, req.query, req.params, req.body)
