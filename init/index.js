@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const middleware = require('../lib/middleware')
 const routerHelper = require('../lib/routerhelper')
+const casbin = require('../lib/casbin')
 
 // get app instand
 async function getApp () {
@@ -29,6 +30,8 @@ async function init () {
   await routerHelper.routerRegister(app)
   // errHandle
   app.use(middleware.errorHandle)
+
+  await casbin()
 
   return app
 }

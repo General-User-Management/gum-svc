@@ -4,7 +4,7 @@ const casbin = require('../lib/casbin')
 class AuthServer {
   // 获取最新 enforcer 实例；
   static async _getEnforcerInstance () {
-    if (!enforcer) {
+    if (!global.enforcer) {
       console.error('enforcer instance is not found')
       await casbin()
     }
