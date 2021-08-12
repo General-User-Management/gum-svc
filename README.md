@@ -22,11 +22,6 @@
             ],
             [
                 "机构管理员",
-                "api/v1/user",
-                "GET"
-            ],
-            [
-                "机构管理员",
                 "api/v1/role/*",
                 "GET"
             ],
@@ -42,18 +37,25 @@
 3. **给用户赋予某个角色**
 ```
 {
+    "method":"addRoleForUser",
+    "args":["hyx","机构管理员"]
+}
+```
+4. **获取到用户拥有的权限**
+```
+{
     "method":"getImplicitPermissionsForUser",
     "args":["hyx"]
 }
 ```
-4. **获取角色拥有的权限**
+5. **获取角色拥有的权限**
 ```
 {
     "method":"getFilteredNamedPolicy",
     "args":["p",0,"机构管理员"]
 }
 ```
-5. **获取用户拥有的角色**
+6. **获取用户拥有的角色**
 ```
 
 {
@@ -66,56 +68,56 @@
     "args":["hyx"]
 }
 ```
-6. **获取角色拥有的用户**
+7. **获取角色拥有的用户**
 ```
 {
     "method":"getUsersForRole",
     "args":["机构管理员"]
 }
 ```
-7. **获取所有的实体**
+8. **获取所有的实体**
 ```
 {
     "method":"getAllSubjects",
     "args":[]
 }
 ```
-8. **获取所有的资源列表**
+9. **获取所有的资源列表**
 ```
 {
     "method":"getAllObjects",
     "args":[]
 }
 ```
-9. **获取所有的行为**
+10. **获取所有的行为**
 ```
 {
     "method":"getAllActions",
     "args":[]
 }
 ```
-10. **获取所有的角色**
+11. **获取所有的角色**
 ```
 {
     "method":"getAllRoles",
     "args":[]
 }
 ```
-11. **获取所有的策略列表**
+12. **获取所有的策略列表**
 ```
 {
     "method":"getPolicy",
     "args":[]
 }
 ```
-12. **查询用户分配给了那些角色**
+13. **查询用户分配给了那些角色**
 ```
 {
     "method":"getFilteredNamedGroupingPolicy",
     "args":["g",0,"hyx"]
 }
 ```
-13. **批量移除角色权限**
+14. **批量移除角色权限**
 ```
 {
     "method":"removeNamedPolicies",
@@ -128,7 +130,7 @@
     ]
 }
 ```
-14. **移除某个用户有用的某个角色**
+15. **移除某个用户有用的某个角色**
 ```
 {
     "method":"deleteRoleForUser",
