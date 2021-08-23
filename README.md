@@ -1,3 +1,5 @@
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ## gum-svc
 权限的系统对策略的执行，封装 casbin 开源组件；对外提供权限的 CURD 操作以及；
 
