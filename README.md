@@ -4,6 +4,7 @@
 权限的系统对策略的执行，封装 casbin 开源组件；对外提供权限的 CURD 操作以及；
 
 ### API列表
+#### 1. 管理相关API
 <details>
   <summary>1. 给角色增加一个api权限</summary>
   <pre><code>
@@ -179,6 +180,17 @@
     {
         "method":"deleteRoleForUser",
         "args":["testuser","测试角色"]
+    }
+</code></pre>
+</details>
+#### 2. 查询相关API
+<details>
+  <summary>1. 查询是否能够调用接口</summary>
+  <pre><code>
+    {
+      "sub":"hyx",
+      "obj":"/api/v1/check",
+      "act":"POST"
     }
 </code></pre>
 </details>
