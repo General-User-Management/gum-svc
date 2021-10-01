@@ -175,7 +175,7 @@
 </details>
 
 <details>
-  <summary>15. 移除某个用户有用的某个角色</summary>
+  <summary>15. 移除某个用户拥有的某个角色</summary>
   <pre><code>
     {
         "method":"deleteRoleForUser",
